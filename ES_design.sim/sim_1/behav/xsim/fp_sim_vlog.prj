@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ES_design.srcs/sources_1/ip/blk_sin/sim/blk_sin.v" \
+"../../../../ES_design.srcs/sources_1/new/Digit_LED.v" \
+"../../../../ES_design.srcs/sources_1/new/freq_div.v" \
+"../../../../ES_design.srcs/sources_1/new/main_progress.v" \
+"../../../../ES_design.srcs/sources_1/new/measure.v" \
+"../../../../ES_design.srcs/sources_1/new/sin.v" \
+"../../../../ES_design.srcs/sources_1/new/two2ten.v" \
+"../../../../ES_design.srcs/sim_1/new/freq_devision_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

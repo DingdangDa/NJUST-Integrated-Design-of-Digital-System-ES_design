@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Oct 23 02:49:47 2022
+# Process ID: 35820
+# Current directory: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1
+# Command line: vivado.exe -log main_progress.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_progress.tcl
+# Log file: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/main_progress.vds
+# Journal file: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source main_progress.tcl -notrace
