@@ -20,6 +20,8 @@
 
 FPGA板子：EGO1
 
+<img src="EGO1.JPG" alt="EGO1" style="zoom:25%;" />
+
 ## 软件
 
 Vivado2019
