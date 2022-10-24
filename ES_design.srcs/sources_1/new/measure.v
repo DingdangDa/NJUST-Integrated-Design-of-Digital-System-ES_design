@@ -16,11 +16,11 @@ module measure(
     reg [0:0] sq_wave_for_meas;//方波，基于被测波生成
     reg [31:0] cnt_sq_wave;//由系统时钟驱动数数，方波上升沿清零
     reg [0:0] AD_D_9_last ;
-    reg [0:0] AD_D_9_period;
+    reg [15:0] AD_D_9_period;
     reg [63:0] sq_wave_period;//测量出来的频率（高刷新率）
     reg [31:0] cnt_flash;//低刷新率数数
     reg [0:0] cnt_sq_wave_set_0_enable;
-    reg [63:0] sq_wave_period_last10 [9:0];
+
 
     always @(posedge clk or negedge sys_rst_n)begin//
         if(!sys_rst_n) begin
@@ -34,19 +34,10 @@ module measure(
             if (AD_D[9] != AD_D_9_last)begin
                 AD_D_9_period <= AD_D_9_period + 1;
                 //cnt_sq_wave_set_0_enable <= 1;
-                if(AD_D_9_period == 1)begin
+                if(AD_D_9_period == 16'd19)begin
                     sq_wave_period <= cnt_sq_wave + 1;
                     cnt_sq_wave <= 0;
-                    sq_wave_period_last10[0] <= sq_wave_period;
-                    sq_wave_period_last10[1] <= sq_wave_period_last10[0];
-                    sq_wave_period_last10[2] <= sq_wave_period_last10[1];
-                    sq_wave_period_last10[3] <= sq_wave_period_last10[2];
-                    sq_wave_period_last10[4] <= sq_wave_period_last10[3];
-                    sq_wave_period_last10[5] <= sq_wave_period_last10[4];
-                    sq_wave_period_last10[6] <= sq_wave_period_last10[5];
-                    sq_wave_period_last10[7] <= sq_wave_period_last10[6];
-                    sq_wave_period_last10[8] <= sq_wave_period_last10[7];
-                    sq_wave_period_last10[9] <= sq_wave_period_last10[8];
+                    AD_D_9_period <= 0;
                 end
             end
             /*

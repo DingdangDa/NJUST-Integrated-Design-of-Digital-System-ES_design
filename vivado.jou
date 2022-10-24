@@ -2,127 +2,46 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Oct 24 18:50:17 2022
-# Process ID: 18880
-# Current directory: C:/Users/Surface/ES_design
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19988 C:\Users\Surface\ES_design\ES_design.xpr
-# Log file: C:/Users/Surface/ES_design/vivado.log
-# Journal file: C:/Users/Surface/ES_design\vivado.jou
+# Start of session at: Mon Oct 24 21:48:40 2022
+# Process ID: 38132
+# Current directory: C:/Users/Dadingdang/Xilinx Project/ES_design
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent52184 C:\Users\Dadingdang\Xilinx Project\ES_design\ES_design.xpr
+# Log file: C:/Users/Dadingdang/Xilinx Project/ES_design/vivado.log
+# Journal file: C:/Users/Dadingdang/Xilinx Project/ES_design\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Surface/ES_design/ES_design.xpr
+open_project {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.xpr}
 update_compile_order -fileset sources_1
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-restart
-run 10 ms
-restart
-run 10 ms
-restart
-run 10 ms
-close_sim
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-restart
-run 10 ms
-close_sim
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-close_sim
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-run 10 ms
-restart
-run 10 ms
-restart
-run 10 ms
-restart
-run 10 ms
-close_sim
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-restart
-run 10 ms
-close_sim
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-restart
-run 10 ms
-restart
-run 10 ms
-close_sim
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-restart
-run 10 ms
-close_sim
-launch_simulation
-source fp_sim.tcl
-restart
-run 10 ms
-close_sim
 reset_run synth_1
-launch_runs synth_1 -jobs 8
+launch_runs synth_1 -jobs 16
 wait_on_run synth_1
-launch_runs impl_1 -jobs 8
+launch_runs impl_1 -jobs 16
 wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
 open_hw
 connect_hw_server
 open_hw_target
-set_property PROGRAM.FILE {C:/Users/Surface/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {is25lp080d-spi-x1_x2_x4}] 0]
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/Surface/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-close_hw
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/Surface/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {is25lp080d-spi-x1_x2_x4}] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/Surface/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 reset_run synth_1
-launch_runs synth_1 -jobs 8
+launch_runs synth_1 -jobs 16
 wait_on_run synth_1
-launch_runs impl_1 -jobs 8
+reset_run synth_1
+launch_runs impl_1 -jobs 16
 wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
+launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/Surface/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

@@ -60,9 +60,9 @@ wire [15:0] xdac_out_16;//XADCµÄÊä³ö£¬ÓĞ12Î»[15:4]
 wire [4:0] btn_push_num;//°´ÏÂ·­×ª
 
 assign CLK_AD = clk_10m;//ADÊ±ÖÓ
+assign CLK_DA = clk_10m;
 //assign led_pin[15:4] = xdac_out_16[15:4];
 assign led_pin[4:0] = btn_push_num[4:0];
-assign CLK_DA = clk_10m;
 assign led_pin[5] = AD_D[9];
 
 Digit_LED led1 (//×ó4Î»ÊıÂë¹ÜµÄÄ£¿é
@@ -137,7 +137,7 @@ div_gen_0 div_gen_1(//µÚ1¸ö³ı·¨Æ÷£¬100MHz / ¡°±»²âÁ¿ĞÅºÅÒ»¸öÖÜÆÚÄÚÓĞ¶àÉÙ¸öÏµÍ³Ê±
     .s_axis_divisor_tdata(meas_period),//³ıÊı
     .s_axis_dividend_tvalid(1'b1),
     //.s_axis_dividend_tready(),
-    .s_axis_dividend_tdata(32'd100_000_000),//±»³ıÊı
+    .s_axis_dividend_tdata(32'd100_000_000_0),//±»³ıÊı
     .m_axis_dout_tvalid(dout_tvalid1),
     .m_axis_dout_tdata(dout_tdata1)
   );
@@ -186,11 +186,11 @@ freq_set2display freq_set2display_meas_period(//±»²âÁ¿ĞÅºÅÖÜÆÚ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂ
 
 );
 
-freq_set2display freq_set2display_set_freq(//Ä¿±êĞÅºÅÖÜÆÚ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂë¹ÜÉÏµÄ¶ÎĞÅºÅ£¨8*8´óĞ¡£©
+freq_set2display freq_set2display_set_period(//Ä¿±êĞÅºÅÖÜÆÚ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂë¹ÜÉÏµÄ¶ÎĞÅºÅ£¨8*8´óĞ¡£©
     .sys_rst_n(sys_rst_n),
     .clk(sys_clk_in),
-    .set_freq(set_freq),
-    .display_freq_num(set_freq_num)
+    .set_freq(set_period),
+    .display_freq_num(set_period_num)
 
 );
 
@@ -233,7 +233,7 @@ always @(posedge sys_clk_in or negedge sys_rst_n) begin
                 if(btn_push_num[1] == 0)begin
                     display_choose <= display_freq_num;//ÏÔÊ¾Éè¶¨ĞÅºÅµÄÆµÂÊ
                 end
-                else display_choose <= set_freq_num;
+                else display_choose <= set_period_num;
             end
         end
 

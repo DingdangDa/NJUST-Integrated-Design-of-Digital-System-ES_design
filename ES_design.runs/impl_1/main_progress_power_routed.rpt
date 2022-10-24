@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Mon Oct 24 21:12:36 2022
-| Host             : Ding-Surface running 64-bit major release  (build 9200)
+| Date             : Mon Oct 24 22:04:02 2022
+| Host             : Ding-Legion running 64-bit major release  (build 9200)
 | Command          : report_power -file main_progress_power_routed.rpt -pb main_progress_power_summary_routed.pb -rpx main_progress_power_routed.rpx
 | Design           : main_progress
 | Device           : xc7a35tcsg324-1
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 99.359 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                     |
-| Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 98.873                           |
-| Device Static (W)        | 0.486                            |
-| Effective TJA (C/W)      | 4.8                              |
-| Max Ambient (C)          | 0.0                              |
-| Junction Temperature (C) | 125.0                            |
-| Confidence Level         | Low                              |
-| Setting File             | ---                              |
-| Simulation Activity File | ---                              |
-| Design Nets Matched      | NA                               |
-+--------------------------+----------------------------------+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 100.709 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 100.223                           |
+| Device Static (W)        | 0.486                             |
+| Effective TJA (C/W)      | 4.8                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,20 +52,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |    42.529 |    12949 |       --- |             --- |
-|   LUT as Logic          |    32.437 |     3360 |     20800 |           16.15 |
-|   Register              |     5.084 |     7353 |     41600 |           17.68 |
-|   CARRY4                |     4.997 |      750 |      8150 |            9.20 |
+| Slice Logic             |    43.199 |    13158 |       --- |             --- |
+|   LUT as Logic          |    33.036 |     3447 |     20800 |           16.57 |
+|   Register              |     5.078 |     7396 |     41600 |           17.78 |
+|   CARRY4                |     5.074 |      766 |      8150 |            9.40 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   LUT as Shift Register |     0.005 |        8 |      9600 |            0.08 |
-|   Others                |     0.000 |     1167 |       --- |             --- |
-| Signals                 |    39.099 |     8743 |       --- |             --- |
+|   LUT as Shift Register |     0.004 |        8 |      9600 |            0.08 |
+|   Others                |     0.000 |     1170 |       --- |             --- |
+| Signals                 |    40.185 |     8830 |       --- |             --- |
 | Block RAM               |     0.005 |      0.5 |        50 |            1.00 |
 | DSPs                    |     2.739 |        3 |        90 |            3.33 |
-| I/O                     |    14.381 |       88 |       210 |           41.90 |
+| I/O                     |    13.975 |       88 |       210 |           41.90 |
 | XADC                    |     0.121 |        1 |       --- |             --- |
 | Static Power            |     0.486 |          |           |                 |
-| Total                   |    99.359 |          |           |                 |
+| Total                   |   100.709 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    84.811 |      84.470 |      0.341 |
-| Vccaux    |       1.800 |     0.578 |       0.524 |      0.053 |
-| Vcco33    |       3.300 |     4.052 |       4.051 |      0.001 |
+| Vccint    |       1.000 |    86.567 |      86.226 |      0.341 |
+| Vccaux    |       1.800 |     0.563 |       0.510 |      0.053 |
+| Vcco33    |       3.300 |     3.937 |       3.936 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,25 +142,26 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| main_progress                  |    98.873 |
-|   btn                          |     0.442 |
-|   div_gen_0                    |    34.042 |
-|     U0                         |    34.042 |
-|       i_synth                  |    34.042 |
-|   div_gen_1                    |    32.338 |
-|     U0                         |    32.338 |
-|       i_synth                  |    32.338 |
-|   freq_div                     |     0.243 |
-|   freq_set2display             |     1.257 |
-|   freq_set2display1            |     1.275 |
-|   freq_set2display_meas_period |     1.220 |
-|   led1                         |     0.194 |
-|   led2                         |     0.178 |
-|   measure0                     |     1.257 |
-|   sin0                         |     6.999 |
+| main_progress                  |   100.223 |
+|   btn                          |     0.469 |
+|   div_gen_0                    |    34.182 |
+|     U0                         |    34.182 |
+|       i_synth                  |    34.182 |
+|   div_gen_1                    |    32.501 |
+|     U0                         |    32.501 |
+|       i_synth                  |    32.501 |
+|   freq_div                     |     0.248 |
+|   freq_set2display             |     1.230 |
+|   freq_set2display1            |     1.245 |
+|   freq_set2display_meas_period |     1.226 |
+|   freq_set2display_set_period  |     1.071 |
+|   led1                         |     0.182 |
+|   led2                         |     0.221 |
+|   measure0                     |     1.010 |
+|   sin0                         |     7.374 |
 |     rom_sin                    |     0.010 |
 |       U0                       |     0.010 |
-|   xadc_wiz                     |     0.186 |
+|   xadc_wiz                     |     0.185 |
 +--------------------------------+-----------+
 
 
