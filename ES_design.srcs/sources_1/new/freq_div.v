@@ -7,7 +7,6 @@
 */
 module freq_div(
     input sys_rst_n, sys_clk_in,
-    input [31:0] set_period,
     output reg clk_10m,clk_10k
 
     );

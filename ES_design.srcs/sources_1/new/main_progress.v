@@ -39,6 +39,7 @@ reg [31:0] set_freq;//这是我们所设置的频率值
 reg [63:0] set_freq_64;
 reg [31:0] set_period;//根据设置的频率值，计算得到的目标周期内含有多少个系统时钟（100MHz）的周期
 wire [63:0] display_freq_num;//拨码开关设置的目标频率值显示在数码管上的段信号（8*8大小）
+wire [63:0] set_freq_num;
 reg [63:0] display_choose;//要输出给数码管的段信号（8*8大小），可变
 
 wire dout_tvalid0;//第0个除法器计算完成的信号，1时为计算完成，未使用到
@@ -46,10 +47,10 @@ wire dout_tvalid1;//第1个除法器计算完成的信号，1时为计算完成，未使用到
 wire [63:0] dout_tdata0;//第0个除法器计算结果，高32位是商，低32位是余数
 wire [63:0] dout_tdata1;//第1个除法器计算结果，高32位是商，低32位是余数
 
-wire [31:0] sq_wave_period;//方波的周期内含有多少个系统时钟（100MHz）周期，方波由AD输入的正弦波得到
+wire [31:0] meas_period;//方波的周期内含有多少个系统时钟（100MHz）周期，方波由AD输入的正弦波得到
 reg [31:0] meas_freq;//方波的频率，也是AD输入的正弦波的频率
 wire [63:0] meas_freq_num;//方波的频率，也是AD输入的正弦波的频率，显示在数码管上的段信号（8*8大小）
-
+wire [63:0] meas_period_num;
 
 
 wire [4:0] channel_out;//XADC的
@@ -58,10 +59,11 @@ wire [15:0] xdac_out_16;//XADC的输出，有12位[15:4]
 
 wire [4:0] btn_push_num;//按下翻转
 
-assign CLK_AD = sys_clk_in;//使用系统时钟作为AD时钟
+assign CLK_AD = clk_10m;//AD时钟
 //assign led_pin[15:4] = xdac_out_16[15:4];
 assign led_pin[4:0] = btn_push_num[4:0];
-
+assign CLK_DA = clk_10m;
+assign led_pin[5] = AD_D[9];
 
 Digit_LED led1 (//左4位数码管的模块
     .sys_rst_n(sys_rst_n),
@@ -82,8 +84,7 @@ Digit_LED led2 (//右4位数码管的模块
 freq_div freq_div(//分频器模块
     .sys_rst_n(sys_rst_n),
     .sys_clk_in(sys_clk_in),
-    .set_period(set_period),
-    .clk_10m(CLK_DA),//10M用于DA
+    .clk_10m(clk_10m),//10M用于DA
     .clk_10k(clk_10k)//10K用于数码管刷新
 );
 
@@ -125,14 +126,15 @@ measure measure0(//频率测量模块
     .sys_rst_n(sys_rst_n),
     .clk(sys_clk_in),
     .AD_D(AD_D),//输入AD的数值
-    .sq_wave_period(sq_wave_period)//输出被测量信号一个周期内有多少个系统时钟（100MHz）的周期
+    .meas_high_flash(btn_push_num[4]),//高低刷新率
+    .meas_period(meas_period)//输出被测量信号一个周期内有多少个时钟（100MHz）的周期
 );
 
 div_gen_0 div_gen_1(//第1个除法器，100MHz / “被测量信号一个周期内有多少个系统时钟（100MHz）的周期” = 被测量信号的频率
     .aclk(sys_clk_in),
     .s_axis_divisor_tvalid(1'b1),
     //.s_axis_divisor_tready(),
-    .s_axis_divisor_tdata(sq_wave_period),//除数
+    .s_axis_divisor_tdata(meas_period),//除数
     .s_axis_dividend_tvalid(1'b1),
     //.s_axis_dividend_tready(),
     .s_axis_dividend_tdata(32'd100_000_000),//被除数
@@ -176,7 +178,21 @@ xadc_wiz_0 xadc_wiz (
   //.busy_out(led[2])        // output wire busy_out
 );
 
+freq_set2display freq_set2display_meas_period(//被测量信号周期转换为显示在8个数码管上的段信号（8*8大小）
+    .sys_rst_n(sys_rst_n),
+    .clk(sys_clk_in),
+    .set_freq(meas_period),
+    .display_freq_num(meas_period_num)
 
+);
+
+freq_set2display freq_set2display_set_freq(//目标信号周期转换为显示在8个数码管上的段信号（8*8大小）
+    .sys_rst_n(sys_rst_n),
+    .clk(sys_clk_in),
+    .set_freq(set_freq),
+    .display_freq_num(set_freq_num)
+
+);
 
 always @(posedge sys_clk_in or negedge sys_rst_n) begin
     if(!sys_rst_n) begin
@@ -188,7 +204,7 @@ always @(posedge sys_clk_in or negedge sys_rst_n) begin
         sw_pin_trans={sw_pin[0],sw_pin[1],sw_pin[2],sw_pin[3],sw_pin[4],sw_pin[5],sw_pin[6],sw_pin[7]};
 
         if(btn_push_num[0] == 0)begin
-            set_freq = (sw_pin_trans * 32'd10_000_000) >> 8;//由开关的值得到目标频率，由于是常数乘除法，在一个周期内能算出来
+            set_freq = (sw_pin_trans * 32'd10_000_000) >> 8;//由开关的值得到目标频率，由于是常数乘法，在一个周期内能算出来
         end
         else begin
             if(btn_push_num[4] == 1)begin
@@ -208,13 +224,23 @@ always @(posedge sys_clk_in or negedge sys_rst_n) begin
         end
         else begin
             if(btn_push_num[2] == 1)begin
-                display_choose <= meas_freq_num;//显示测量信号的频率
+                if(btn_push_num[1] == 0)begin
+                    display_choose <= meas_freq_num;//显示测量信号的频率
+                end
+                else display_choose <= meas_period_num;//显示测量信号的周期
             end
             else begin
-                display_choose <= display_freq_num;//显示设定信号的频率
+                if(btn_push_num[1] == 0)begin
+                    display_choose <= display_freq_num;//显示设定信号的频率
+                end
+                else display_choose <= set_freq_num;
             end
         end
-        
+
+
+
+
+
     end
 end
 

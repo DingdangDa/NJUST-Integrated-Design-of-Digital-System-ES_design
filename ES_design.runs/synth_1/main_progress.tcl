@@ -17,42 +17,40 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
+set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/Surface/ES_design/ES_design.cache/wt [current_project]
+set_property parent.project_path C:/Users/Surface/ES_design/ES_design.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/Surface/ES_design/ES_design.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files {{C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/sin.coe}}
+add_files C:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/sin.coe
 read_verilog -library xil_defaultlib {
-  {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/Digit_LED.v}
-  {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/btn.v}
-  {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/freq_div.v}
-  {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/measure.v}
-  {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v}
-  {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v}
-  {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v}
+  C:/Users/Surface/ES_design/ES_design.srcs/sources_1/new/Digit_LED.v
+  C:/Users/Surface/ES_design/ES_design.srcs/sources_1/new/btn.v
+  C:/Users/Surface/ES_design/ES_design.srcs/sources_1/new/freq_div.v
+  C:/Users/Surface/ES_design/ES_design.srcs/sources_1/new/measure.v
+  C:/Users/Surface/ES_design/ES_design.srcs/sources_1/new/sin.v
+  C:/Users/Surface/ES_design/ES_design.srcs/sources_1/new/two2ten.v
+  C:/Users/Surface/ES_design/ES_design.srcs/sources_1/new/main_progress.v
 }
-read_ip -quiet {{C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc}}]
+read_ip -quiet C:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc]
 
-read_ip -quiet {{C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin_ooc.xdc}}]
+read_ip -quiet C:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin.xci
+set_property used_in_implementation false [get_files -all c:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin_ooc.xdc]
 
-read_ip -quiet {{C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc}}]
+read_ip -quiet C:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Surface/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -62,8 +60,8 @@ set_property used_in_implementation false [get_files -all {{c:/Users/Dadingdang/
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc}}]
+read_xdc C:/Users/Surface/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc
+set_property used_in_implementation false [get_files C:/Users/Surface/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

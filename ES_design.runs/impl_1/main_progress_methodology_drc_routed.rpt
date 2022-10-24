@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Oct 23 02:51:45 2022
-| Host         : Ding-Legion running 64-bit major release  (build 9200)
+| Date         : Mon Oct 24 21:12:31 2022
+| Host         : Ding-Surface running 64-bit major release  (build 9200)
 | Command      : report_methodology -file main_progress_methodology_drc_routed.rpt -pb main_progress_methodology_drc_routed.pb -rpx main_progress_methodology_drc_routed.rpx
 | Design       : main_progress
 | Device       : xc7a35tcsg324-1
@@ -5035,7 +5035,7 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell freq_set2display1/dec_power_for_compare[0]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) set_freq_reg[0]/CLR, set_freq_reg[10]/CLR, set_freq_reg[11]/CLR, set_freq_reg[12]/CLR, set_freq_reg[13]/CLR, set_freq_reg[14]/CLR, set_freq_reg[15]/CLR, set_freq_reg[16]/CLR, set_freq_reg[17]/CLR, set_freq_reg[18]/CLR, set_freq_reg[19]/CLR, set_freq_reg[1]/CLR, set_freq_reg[20]/CLR, set_freq_reg[21]/CLR, set_freq_reg[22]/CLR (the first 15 of 374 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell freq_set2display/dec_power_for_compare[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) measure0/AD_D_9_last_reg[0]/CLR, measure0/AD_D_9_period_reg[0]/CLR, measure0/cnt_sq_wave_reg[0]/CLR, measure0/cnt_sq_wave_reg[10]/CLR, measure0/cnt_sq_wave_reg[11]/CLR, measure0/cnt_sq_wave_reg[12]/CLR, measure0/cnt_sq_wave_reg[13]/CLR, measure0/cnt_sq_wave_reg[14]/CLR, measure0/cnt_sq_wave_reg[15]/CLR, measure0/cnt_sq_wave_reg[16]/CLR, measure0/cnt_sq_wave_reg[17]/CLR, measure0/cnt_sq_wave_reg[18]/CLR, measure0/cnt_sq_wave_reg[19]/CLR, measure0/cnt_sq_wave_reg[1]/CLR, measure0/cnt_sq_wave_reg[20]/CLR (the first 15 of 519 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 

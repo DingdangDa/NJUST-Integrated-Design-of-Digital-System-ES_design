@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc} rfile:../../../ES_design.srcs/constrs_1/new/EGo1.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Surface/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc rfile:../../../ES_design.srcs/constrs_1/new/EGo1.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 /////////////////////////////系统时钟和复位////////////////////////////////////
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

@@ -64,13 +64,19 @@ always @(posedge clk or negedge sys_rst_n) begin
 
         if(cnt_for_sin == set_period - 1) begin//大周期数数，周期set_period，是目标波的周期
             cnt_for_sin <= 0;
+            cnt_for_sin_10m <= 0;
+            cpr_finish <= 0;//未完成映射
+            n_in_256[0]<=0;n_in_256[1]<=0;n_in_256[2]<=0;n_in_256[3]<=0;//初始化这玩意，他只能一个个来
+            n_in_256[4]<=0;n_in_256[5]<=0;n_in_256[6]<=0;n_in_256[7]<=0;
+            addra <= 8'b0000_0000;
+            cnt_for_sin_out_10m <= 0;
         end
         else cnt_for_sin <= cnt_for_sin + 1;
 
         if(cnt_for_sin_out_10m == 0)begin//10Mhz的数数，10个时钟周期，周期的开始0
             cnt_for_sin_10m <= cnt_for_sin;//取值，由于cnt_for_sin在每个时钟周期都变化，太快了，用cnt_for_sin_10m暂存，刷新率10M
             set_period_cut_for_cpr <= set_period  >> 1;//希望二分对比值在第二个周期，即1时，是设定周期的一半
-            cpr_finish <= 0;//未锟斤拷锟接筹拷锟?
+            cpr_finish <= 0;//未完成映射
             n_in_256[0]<=0;n_in_256[1]<=0;n_in_256[2]<=0;n_in_256[3]<=0;//初始化这玩意，他只能一个个来
             n_in_256[4]<=0;n_in_256[5]<=0;n_in_256[6]<=0;n_in_256[7]<=0;
             dac_wr2_n <= 0;//这个是对板载DAC的某一控制位翻转，可以让板载DAC刷新一下输出
@@ -99,10 +105,10 @@ always @(posedge clk or negedge sys_rst_n) begin
             cpr_finish <= 1;//完成映射（约等于）?
             //dac_data <= sin_data[{n_in_256[7],n_in_256[6],n_in_256[5],n_in_256[4],n_in_256[3],n_in_256[2],n_in_256[1],n_in_256[0]}];
             addra <= {n_in_256[7],n_in_256[6],n_in_256[5],n_in_256[4],n_in_256[3],n_in_256[2],n_in_256[1],n_in_256[0]};
-            dac_data <= douta;
-            dac_wr2_n <= 1;//这个是对板载DAC的某一控制位翻转，可以让板载DAC刷新一下输出
+            //dac_data <= douta;
+            //dac_wr2_n <= 1;//这个是对板载DAC的某一控制位翻转，可以让板载DAC刷新一下输出
         end
-
+        dac_data <= douta;
 
     end
 end

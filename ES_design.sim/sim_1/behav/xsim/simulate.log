@@ -3,6 +3,12 @@ Time resolution is 1 ps
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
 Block Memory Generator module fp_sim.u_main.sin0.rom_sin.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance fp_sim.u_main.xadc_wiz.inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
 Block Memory Generator module fp_sim.u_main.sin0.rom_sin.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance fp_sim.u_main.xadc_wiz.inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
