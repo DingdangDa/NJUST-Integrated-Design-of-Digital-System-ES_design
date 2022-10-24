@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Oct 24 22:04:09 2022">
+<application name="pa" timeStamp="Tue Oct 25 00:52:39 2022">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="dff502825d0744c9a873528248a51e11" type="ProjectID"/>
 <property name="ProjectIteration" value="129" type="ProjectIteration"/>
@@ -29,7 +29,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditDelete" value="8" type="JavaHandler"/>
 <property name="EditProperties" value="4" type="JavaHandler"/>
 <property name="FilePrintCmdHandler" value="2" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="68" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="69" type="JavaHandler"/>
 <property name="NewIPLocationHandler" value="1" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="48" type="JavaHandler"/>
 <property name="OpenProject" value="3" type="JavaHandler"/>
@@ -67,7 +67,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN" value="3" type="GuiHandlerData"/>
 <property name="AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES" value="1" type="GuiHandlerData"/>
 <property name="AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES" value="2" type="GuiHandlerData"/>
-<property name="BaseDialog_CANCEL" value="41" type="GuiHandlerData"/>
+<property name="BaseDialog_CANCEL" value="43" type="GuiHandlerData"/>
 <property name="BaseDialog_OK" value="623" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="9" type="GuiHandlerData"/>
 <property name="CfgMemPartChooser_DENSITY_CHOOSER" value="4" type="GuiHandlerData"/>
@@ -77,7 +77,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CfgMemPartChooser_WIDTH_CHOOSER" value="5" type="GuiHandlerData"/>
 <property name="ClosePlanner_YES" value="3" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_MESSAGES" value="15" type="GuiHandlerData"/>
-<property name="CmdMsgDialog_OK" value="52" type="GuiHandlerData"/>
+<property name="CmdMsgDialog_OK" value="53" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OPEN_MESSAGES_VIEW" value="7" type="GuiHandlerData"/>
 <property name="ConfirmSaveTextEditsDialog_NO" value="2" type="GuiHandlerData"/>
 <property name="ConfirmSaveTextEditsDialog_YES" value="4" type="GuiHandlerData"/>
@@ -174,10 +174,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProgramCfgMemDialog_CONTENTS_OF_CONFIGURATION_FILE" value="1" type="GuiHandlerData"/>
 <property name="ProgramCfgMemDialog_SPECIFY_PRM_FILE" value="1" type="GuiHandlerData"/>
 <property name="ProgramDebugTab_OPEN_TARGET" value="26" type="GuiHandlerData"/>
-<property name="ProgramDebugTab_PROGRAM_DEVICE" value="56" type="GuiHandlerData"/>
+<property name="ProgramDebugTab_PROGRAM_DEVICE" value="57" type="GuiHandlerData"/>
 <property name="ProgramDebugTab_REFRESH_DEVICE" value="1" type="GuiHandlerData"/>
 <property name="ProgramFpgaDialog_CHECK_END_OF_STARTUP" value="4" type="GuiHandlerData"/>
-<property name="ProgramFpgaDialog_PROGRAM" value="75" type="GuiHandlerData"/>
+<property name="ProgramFpgaDialog_PROGRAM" value="76" type="GuiHandlerData"/>
 <property name="ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE" value="31" type="GuiHandlerData"/>
 <property name="ProgramFpgaDialog_SPECIFY_DEBUG_PROBES_FILE" value="1" type="GuiHandlerData"/>
 <property name="ProgressDialog_BACKGROUND" value="10" type="GuiHandlerData"/>
@@ -221,6 +221,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WriteCfgMemFileDialog_SPECIFY_CONFIGURATION_FILENAME" value="3" type="GuiHandlerData"/>
 <property name="XPG_IPSymbol_SHOW_DISABLED_PORTS" value="4" type="GuiHandlerData"/>
 <property name="XPG_TabbedPane_TABBED_PANE" value="2" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="2" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="1" type="TclMode"/>
 </item>
 </section>
 </application>
