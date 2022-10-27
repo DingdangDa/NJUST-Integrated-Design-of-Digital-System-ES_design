@@ -60,15 +60,18 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 2
+  set_param synth.incrementalSynthesisCache C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/.Xil/Vivado-1168-Ding-Surface/incrSyn
   set_param xicom.use_bs_reader 1
   open_checkpoint main_progress_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.cache/wt} [current_project]
+  set_property webtalk.parent_dir C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.cache/wt [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force main_progress.mmi }
   write_bitstream -force main_progress.bit 

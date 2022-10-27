@@ -2,12 +2,12 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Oct 24 22:01:52 2022
-# Process ID: 48352
-# Current directory: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1
+# Start of session at: Thu Oct 27 11:07:52 2022
+# Process ID: 22444
+# Current directory: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
 # Command line: vivado.exe -log main_progress.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_progress.tcl
-# Log file: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/main_progress.vds
-# Journal file: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1\vivado.jou
+# Log file: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/main_progress.vds
+# Journal file: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source main_progress.tcl -notrace
 Command: synth_design -top main_progress -part xc7a35tcsg324-1
@@ -16,80 +16,82 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 47332 
+INFO: Helper process launched with PID 12408 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 711.738 ; gain = 177.219
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 711.500 ; gain = 177.043
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'main_progress' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:11]
-INFO: [Synth 8-6157] synthesizing module 'Digit_LED' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/Digit_LED.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'Digit_LED' (1#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/Digit_LED.v:8]
-INFO: [Synth 8-6157] synthesizing module 'freq_div' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/freq_div.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'freq_div' (2#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/freq_div.v:8]
-INFO: [Synth 8-6157] synthesizing module 'freq_set2display' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:18]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:60]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:86]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:100]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_nice_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
-WARNING: [Synth 8-5788] Register freq_num_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register freq_num_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register freq_num_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register freq_num_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register freq_num_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register freq_num_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register freq_num_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register freq_num_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-WARNING: [Synth 8-5788] Register display_freq_num_make_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
-INFO: [Synth 8-6155] done synthesizing module 'freq_set2display' (3#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/two2ten.v:18]
-INFO: [Synth 8-6157] synthesizing module 'div_gen_0' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/.Xil/Vivado-48352-Ding-Legion/realtime/div_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'div_gen_0' (4#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/.Xil/Vivado-48352-Ding-Legion/realtime/div_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'sin' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:13]
-INFO: [Synth 8-6157] synthesizing module 'blk_sin' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/.Xil/Vivado-48352-Ding-Legion/realtime/blk_sin_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_sin' (5#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/.Xil/Vivado-48352-Ding-Legion/realtime/blk_sin_stub.v:6]
-WARNING: [Synth 8-5788] Register n_in_256_reg[7] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register n_in_256_reg[6] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register n_in_256_reg[5] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register n_in_256_reg[4] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register n_in_256_reg[3] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register n_in_256_reg[2] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register n_in_256_reg[1] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register n_in_256_reg[0] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:69]
-WARNING: [Synth 8-5788] Register addra_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:38]
-WARNING: [Synth 8-5788] Register set_period_cut_for_cpr_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:78]
-WARNING: [Synth 8-5788] Register dac_data_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:111]
-INFO: [Synth 8-6155] done synthesizing module 'sin' (6#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/sin.v:13]
-INFO: [Synth 8-6157] synthesizing module 'measure' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/measure.v:8]
-WARNING: [Synth 8-5788] Register sq_wave_period_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/measure.v:38]
-WARNING: [Synth 8-5788] Register cnt_flash_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/measure.v:53]
-WARNING: [Synth 8-5788] Register meas_period_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/measure.v:59]
-INFO: [Synth 8-6155] done synthesizing module 'measure' (7#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/measure.v:8]
-INFO: [Synth 8-6157] synthesizing module 'btn' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/btn.v:11]
-WARNING: [Synth 8-5788] Register cnt_btn_reg in module btn is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/btn.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'btn' (8#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/btn.v:11]
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/.Xil/Vivado-48352-Ding-Legion/realtime/xadc_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (9#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/.Xil/Vivado-48352-Ding-Legion/realtime/xadc_wiz_0_stub.v:5]
-WARNING: [Synth 8-7023] instance 'xadc_wiz' of module 'xadc_wiz_0' has 20 connections declared, but only 10 given [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:160]
-WARNING: [Synth 8-689] width (1) of port connection 'display_freq_num' does not match port width (64) of module 'freq_set2display' [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:193]
-WARNING: [Synth 8-6014] Unused sequential element sw_pin_trans_reg was removed.  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:204]
-WARNING: [Synth 8-6014] Unused sequential element set_freq_64_reg was removed.  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:211]
-WARNING: [Synth 8-5788] Register set_period_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:115]
-WARNING: [Synth 8-5788] Register meas_freq_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:148]
-WARNING: [Synth 8-5788] Register display_choose_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:71]
-WARNING: [Synth 8-3848] Net dac_data in module/entity main_progress does not have driver. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:27]
-INFO: [Synth 8-6155] done synthesizing module 'main_progress' (10#1) [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/new/main_progress.v:11]
+INFO: [Synth 8-6157] synthesizing module 'main_progress' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:11]
+INFO: [Synth 8-6157] synthesizing module 'Digit_LED' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/Digit_LED.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'Digit_LED' (1#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/Digit_LED.v:8]
+INFO: [Synth 8-6157] synthesizing module 'freq_div' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/freq_div.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'freq_div' (2#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/freq_div.v:8]
+INFO: [Synth 8-6157] synthesizing module 'freq_set2display' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:18]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:60]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:86]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:100]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'freq_set2display' (3#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:18]
+INFO: [Synth 8-6157] synthesizing module 'div_gen_0' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/.Xil/Vivado-22444-Ding-Surface/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'div_gen_0' (4#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/.Xil/Vivado-22444-Ding-Surface/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sin' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:13]
+INFO: [Synth 8-6157] synthesizing module 'blk_sin' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/.Xil/Vivado-22444-Ding-Surface/realtime/blk_sin_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_sin' (5#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/.Xil/Vivado-22444-Ding-Surface/realtime/blk_sin_stub.v:6]
+WARNING: [Synth 8-5788] Register n_in_256_reg[7] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[6] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[5] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[4] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[3] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[2] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[1] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[0] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register addra_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:38]
+WARNING: [Synth 8-5788] Register set_period_cut_for_cpr_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:78]
+WARNING: [Synth 8-5788] Register dac_data_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'sin' (6#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:13]
+INFO: [Synth 8-6157] synthesizing module 'measure' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:8]
+WARNING: [Synth 8-6014] Unused sequential element cnt_sq_wave_reg was removed.  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:28]
+WARNING: [Synth 8-5788] Register cnt_to_half_sec_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:34]
+WARNING: [Synth 8-5788] Register sq_wave_period_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:52]
+WARNING: [Synth 8-5788] Register cnt_flash_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:59]
+WARNING: [Synth 8-5788] Register meas_period_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'measure' (7#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:8]
+INFO: [Synth 8-6157] synthesizing module 'btn' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v:11]
+WARNING: [Synth 8-5788] Register cnt_btn_reg in module btn is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'btn' (8#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v:11]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/.Xil/Vivado-22444-Ding-Surface/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (9#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/.Xil/Vivado-22444-Ding-Surface/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'xadc_wiz' of module 'xadc_wiz_0' has 20 connections declared, but only 10 given [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:167]
+WARNING: [Synth 8-6014] Unused sequential element sw_pin_trans_reg was removed.  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:211]
+WARNING: [Synth 8-6014] Unused sequential element set_freq_64_reg was removed.  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:218]
+WARNING: [Synth 8-5788] Register set_period_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:121]
+WARNING: [Synth 8-5788] Register meas_freq_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:155]
+WARNING: [Synth 8-5788] Register display_choose_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:77]
+WARNING: [Synth 8-3848] Net dac_data in module/entity main_progress does not have driver. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'main_progress' (10#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:11]
+WARNING: [Synth 8-3917] design main_progress has port audio_sd_o driven by constant 1
 WARNING: [Synth 8-3331] design measure has unconnected port AD_D[8]
 WARNING: [Synth 8-3331] design measure has unconnected port AD_D[7]
 WARNING: [Synth 8-3331] design measure has unconnected port AD_D[6]
@@ -131,7 +133,7 @@ WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[3]
 WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[2]
 WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 778.156 ; gain = 243.637
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 777.789 ; gain = 243.332
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -144,143 +146,141 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 778.156 ; gain = 243.637
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 777.789 ; gain = 243.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 778.156 ; gain = 243.637
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 777.789 ; gain = 243.332
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_0'
-Finished Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_0'
-Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_1'
-Finished Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_1'
-Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin/blk_sin_in_context.xdc] for cell 'sin0/rom_sin'
-Finished Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin/blk_sin_in_context.xdc] for cell 'sin0/rom_sin'
-Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_wiz'
-Finished Parsing XDC File [c:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_wiz'
-Parsing XDC File [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]
-CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////系统时钟和复位////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:1]
-CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////串口/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:5]
-WARNING: [Vivado 12-584] No ports matched 'PC_Uart_rxd'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:6]
-WARNING: [Vivado 12-584] No ports matched 'PC_Uart_txd'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:7]
-CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////蓝牙///////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:9]
-WARNING: [Vivado 12-584] No ports matched 'BT_Uart_rxd'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:10]
-WARNING: [Vivado 12-584] No ports matched 'BT_Uart_txd'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:11]
-WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[0]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:13]
-WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[1]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:14]
-WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[2]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:15]
-WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[3]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:16]
-WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[4]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:17]
-WARNING: [Vivado 12-584] No ports matched 'bt_mcu_int_i'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:19]
-CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////音频接口////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:21]
-WARNING: [Vivado 12-584] No ports matched 'audio_pwm_o'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:22]
-WARNING: [Vivado 12-584] No ports matched 'audio_sd_o'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:23]
-CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////iic////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:25]
-WARNING: [Vivado 12-584] No ports matched 'pw_iic_scl_io'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:26]
-WARNING: [Vivado 12-584] No ports matched 'pw_iic_sda_io'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:27]
-CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////XADC模数转换///////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:29]
-WARNING: [Vivado 12-584] No ports matched 'XADC_VP_VN_v_n'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:32]
-WARNING: [Vivado 12-584] No ports matched 'XADC_VP_VN_v_p'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:33]
-CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////5个按键//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:35]
-CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////拨码开关sw0~sw7////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:42]
-CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////拨码开关sw8~sw15/////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:52]
-CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////////LED0~LED15////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:63]
-CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////8个数码管位选信号/////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:82]
-CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////数码管段选信号//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:92]
-CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////VGA行同步场同步信号///////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:111]
-WARNING: [Vivado 12-584] No ports matched 'vga_hs_pin'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:112]
-WARNING: [Vivado 12-584] No ports matched 'vga_vs_pin'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:113]
-CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////////VGA红绿蓝信号//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:115]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[0]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:116]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[1]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:117]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[2]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:118]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[3]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:119]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[4]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:120]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[5]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:121]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[6]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:122]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[7]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:123]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[8]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:124]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[9]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:125]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[10]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:126]
-WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[11]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:127]
-CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////////DAC数模转换//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:129]
-CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////////PS2/////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:145]
-WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:146]
-WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:147]
-CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////////SDRAM//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:150]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[18]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:151]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[17]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:152]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[16]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:153]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[15]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:154]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[14]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:155]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[13]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:156]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[12]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:157]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[11]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:158]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[10]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:159]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[9]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:160]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[8]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:161]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[7]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:162]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[6]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:163]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[5]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:164]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[4]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:165]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[3]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:166]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[2]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:167]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[1]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:168]
-WARNING: [Vivado 12-584] No ports matched 'sram_addr[0]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:169]
-WARNING: [Vivado 12-584] No ports matched 'sram_ce_n'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:171]
-WARNING: [Vivado 12-584] No ports matched 'sram_lb_n'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:172]
-WARNING: [Vivado 12-584] No ports matched 'sram_oe_n'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:173]
-WARNING: [Vivado 12-584] No ports matched 'sram_ub_n'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:174]
-WARNING: [Vivado 12-584] No ports matched 'sram_we_n'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:175]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[15]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:177]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[14]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:178]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[13]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:179]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[12]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:180]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[11]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:181]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[10]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:182]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[9]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:183]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[8]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:184]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[7]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:185]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[6]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:186]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[5]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:187]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[4]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:188]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[3]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:189]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[2]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:190]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[1]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:191]
-WARNING: [Vivado 12-584] No ports matched 'sram_data[0]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:192]
-CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////32个pmod接口//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:194]
-WARNING: [Vivado 12-584] No ports matched 'exp_io[8]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:195]
-WARNING: [Vivado 12-584] No ports matched 'exp_io[9]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:196]
-WARNING: [Vivado 12-584] No ports matched 'exp_io[23]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:198]
-WARNING: [Vivado 12-584] No ports matched 'exp_io[24]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:199]
-WARNING: [Vivado 12-584] No ports matched 'exp_io[25]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:200]
-WARNING: [Vivado 12-584] No ports matched 'exp_io[26]'. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:201]
-CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////外接AD/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:203]
-CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////外接DA/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:217]
-CRITICAL WARNING: [Designutils 20-1307] Command '//set_property' is not supported in the xdc constraint file. [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:235]
-Finished Parsing XDC File [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/main_progress_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_progress_propImpl.xdc].
+Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_0'
+Finished Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_0'
+Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_1'
+Finished Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'div_gen_1'
+Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin/blk_sin_in_context.xdc] for cell 'sin0/rom_sin'
+Finished Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin/blk_sin_in_context.xdc] for cell 'sin0/rom_sin'
+Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_wiz'
+Finished Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_wiz'
+Parsing XDC File [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////系统时钟和复位////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:1]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////串口/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'PC_Uart_rxd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'PC_Uart_txd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:7]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////蓝牙///////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'BT_Uart_rxd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'BT_Uart_txd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'bt_mcu_int_i'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:19]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////音频接口////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:21]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////iic////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'pw_iic_scl_io'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'pw_iic_sda_io'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:27]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////XADC模数转换///////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'XADC_VP_VN_v_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'XADC_VP_VN_v_p'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:33]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////5个按键//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:35]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////拨码开关sw0~sw7////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:42]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////拨码开关sw8~sw15/////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:52]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////////LED0~LED15////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:63]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////8个数码管位选信号/////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:82]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////数码管段选信号//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:92]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////VGA行同步场同步信号///////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'vga_hs_pin'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'vga_vs_pin'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:113]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////////VGA红绿蓝信号//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[5]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[6]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[7]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[10]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[11]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:127]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////////DAC数模转换//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:129]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////////PS2/////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:145]
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:147]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////////SDRAM//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[18]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:151]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[17]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[16]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:153]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[15]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[14]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[13]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[12]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[11]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[10]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:159]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:161]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[7]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:162]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[6]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[5]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:164]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:165]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:168]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:169]
+WARNING: [Vivado 12-584] No ports matched 'sram_ce_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:171]
+WARNING: [Vivado 12-584] No ports matched 'sram_lb_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:172]
+WARNING: [Vivado 12-584] No ports matched 'sram_oe_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:173]
+WARNING: [Vivado 12-584] No ports matched 'sram_ub_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:174]
+WARNING: [Vivado 12-584] No ports matched 'sram_we_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:175]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[15]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:177]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[14]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:178]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[13]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:179]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[12]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:180]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[11]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:181]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[10]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:182]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:183]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:184]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[7]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:185]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[6]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:186]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[5]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:187]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:188]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:189]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:190]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:191]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:192]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////32个pmod接口//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:194]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:195]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:196]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[23]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:198]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[24]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:199]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[25]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:200]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[26]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:201]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////外接AD/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:203]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////外接DA/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:217]
+CRITICAL WARNING: [Designutils 20-1307] Command '//set_property' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:235]
+Finished Parsing XDC File [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/main_progress_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_progress_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_progress_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 905.398 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 905.047 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 905.398 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 905.047 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 905.398 ; gain = 370.879
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 905.047 ; gain = 370.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 905.398 ; gain = 370.879
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 905.047 ; gain = 370.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -290,10 +290,10 @@ Applied set_property DONT_TOUCH = true for div_gen_1. (constraint file  auto gen
 Applied set_property DONT_TOUCH = true for sin0/rom_sin. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for xadc_wiz. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 905.398 ; gain = 370.879
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 905.047 ; gain = 370.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 905.398 ; gain = 370.879
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 905.047 ; gain = 370.590
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -306,17 +306,16 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 6     
 	   3 Input     32 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 14    
 	   2 Input      2 Bit       Adders := 2     
 +---Registers : 
-	               64 Bit    Registers := 6     
-	               32 Bit    Registers := 16    
-	               16 Bit    Registers := 2     
+	               64 Bit    Registers := 5     
+	               32 Bit    Registers := 19    
+	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 36    
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 72    
@@ -324,13 +323,13 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 17    
 +---Muxes : 
 	   2 Input     64 Bit        Muxes := 4     
-	   2 Input     32 Bit        Muxes := 14    
+	   2 Input     32 Bit        Muxes := 16    
 	   2 Input     24 Bit        Muxes := 4     
 	   8 Input     24 Bit        Muxes := 4     
 	   4 Input      8 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 345   
 	   2 Input      4 Bit        Muxes := 111   
-	   2 Input      1 Bit        Muxes := 135   
+	   2 Input      1 Bit        Muxes := 136   
 	   3 Input      1 Bit        Muxes := 5     
 	   8 Input      1 Bit        Muxes := 4     
 	   4 Input      1 Bit        Muxes := 8     
@@ -413,17 +412,14 @@ Detailed RTL Component Info :
 Module measure 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 2     
-	   2 Input     16 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
 +---Registers : 
-	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
+	               32 Bit    Registers := 5     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module btn 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -457,6 +453,7 @@ DSP Report: Generating DSP set_freq1, operation Mode is: (A:0x989680)*B.
 DSP Report: operator set_freq1 is absorbed into DSP set_freq1.
 DSP Report: Generating DSP set_freq1, operation Mode is: (A:0x989680)*B.
 DSP Report: operator set_freq1 is absorbed into DSP set_freq1.
+WARNING: [Synth 8-3917] design main_progress has port audio_sd_o driven by constant 1
 WARNING: [Synth 8-3331] design measure has unconnected port AD_D[8]
 WARNING: [Synth 8-3331] design measure has unconnected port AD_D[7]
 WARNING: [Synth 8-3331] design measure has unconnected port AD_D[6]
@@ -528,7 +525,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (sin0/dac_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (sin0/dac_cs_n_reg)
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (sin0/dac_ile_reg)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 905.398 ; gain = 370.879
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 905.047 ; gain = 370.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -557,13 +554,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 932.184 ; gain = 397.664
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 934.320 ; gain = 399.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 935.512 ; gain = 400.992
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 938.109 ; gain = 403.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -575,7 +572,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 978.543 ; gain = 444.023
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 986.281 ; gain = 451.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -626,7 +623,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module xadc_wiz has unconnected pin di
 CRITICAL WARNING: [Synth 8-4442] BlackBox module xadc_wiz has unconnected pin vp_in
 CRITICAL WARNING: [Synth 8-4442] BlackBox module xadc_wiz has unconnected pin vn_in
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -639,7 +636,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -651,25 +648,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -693,20 +690,20 @@ Report Cell Usage:
 |3     |div_gen_0__2 |     1|
 |4     |xadc_wiz_0   |     1|
 |5     |BUFG         |     1|
-|6     |CARRY4       |   142|
+|6     |CARRY4       |   130|
 |7     |DSP48E1      |     3|
-|8     |LUT1         |    43|
-|9     |LUT2         |   289|
-|10    |LUT3         |   120|
-|11    |LUT4         |   299|
-|12    |LUT5         |   262|
-|13    |LUT6         |   475|
-|14    |FDCE         |   571|
+|8     |LUT1         |    42|
+|9     |LUT2         |   296|
+|10    |LUT3         |   160|
+|11    |LUT4         |   310|
+|12    |LUT5         |   244|
+|13    |LUT6         |   547|
+|14    |FDCE         |   611|
 |15    |FDPE         |    19|
-|16    |FDRE         |   639|
+|16    |FDRE         |   783|
 |17    |FDSE         |    39|
 |18    |IBUF         |    19|
-|19    |OBUF         |    45|
+|19    |OBUF         |    47|
 |20    |OBUFT        |    24|
 +------+-------------+------+
 
@@ -714,40 +711,40 @@ Report Instance Areas:
 +------+-------------------------------+-------------------+------+
 |      |Instance                       |Module             |Cells |
 +------+-------------------------------+-------------------+------+
-|1     |top                            |                   |  3157|
+|1     |top                            |                   |  3442|
 |2     |  btn                          |btn                |   147|
 |3     |  freq_div                     |freq_div           |    52|
-|4     |  freq_set2display             |freq_set2display   |   497|
+|4     |  freq_set2display             |freq_set2display   |   496|
 |5     |  freq_set2display1            |freq_set2display_0 |   496|
 |6     |  freq_set2display_meas_period |freq_set2display_1 |   496|
-|7     |  freq_set2display_set_period  |freq_set2display_2 |   204|
+|7     |  freq_set2display_set_period  |freq_set2display_2 |   497|
 |8     |  led1                         |Digit_LED          |    25|
 |9     |  led2                         |Digit_LED_3        |    25|
-|10    |  measure0                     |measure            |   249|
+|10    |  measure0                     |measure            |   240|
 |11    |  sin0                         |sin                |   530|
 +------+-------------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 27 critical warnings and 40 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 986.141 ; gain = 324.379
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 986.141 ; gain = 451.621
+Synthesis finished with 0 errors, 27 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 992.609 ; gain = 330.895
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 992.609 ; gain = 458.152
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 145 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 986.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 992.609 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-65 Infos, 206 Warnings, 48 Critical Warnings and 0 Errors encountered.
+65 Infos, 207 Warnings, 48 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 986.141 ; gain = 684.676
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 986.141 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 992.609 ; gain = 692.301
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 992.609 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.runs/synth_1/main_progress.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/main_progress.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_progress_utilization_synth.rpt -pb main_progress_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 24 22:02:37 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 27 11:09:06 2022...

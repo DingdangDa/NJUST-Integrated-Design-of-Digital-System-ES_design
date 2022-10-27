@@ -28,7 +28,9 @@ module main_progress(
     output CLK_AD,//外接AD的时钟
     output CLK_DA,//外接DA的时钟
     output [13:0] DA_D,//外接DA，数据输出
-    output [15:0] led_pin//LED
+    output [15:0] led_pin,//LED
+    output audio_sd_o,
+    output audio_pwm_o
 );
 
 
@@ -51,6 +53,7 @@ wire [31:0] meas_period;//方波的周期内含有多少个系统时钟（100MHz）周期，方波由AD
 reg [31:0] meas_freq;//方波的频率，也是AD输入的正弦波的频率
 wire [63:0] meas_freq_num;//方波的频率，也是AD输入的正弦波的频率，显示在数码管上的段信号（8*8大小）
 wire [63:0] meas_period_num;
+wire [63:0] set_period_num;
 
 
 wire [4:0] channel_out;//XADC的
@@ -64,6 +67,9 @@ assign CLK_DA = clk_10m;
 //assign led_pin[15:4] = xdac_out_16[15:4];
 assign led_pin[4:0] = btn_push_num[4:0];
 assign led_pin[5] = AD_D[9];
+
+assign audio_sd_o = 1;
+assign audio_pwm_o = DA_D[13];
 
 Digit_LED led1 (//左4位数码管的模块
     .sys_rst_n(sys_rst_n),
@@ -137,7 +143,8 @@ div_gen_0 div_gen_1(//第1个除法器，100MHz / “被测量信号一个周期内有多少个系统时
     .s_axis_divisor_tdata(meas_period),//除数
     .s_axis_dividend_tvalid(1'b1),
     //.s_axis_dividend_tready(),
-    .s_axis_dividend_tdata(32'd100_000_000_0),//被除数
+    //.s_axis_dividend_tdata(32'd100_000_000_0),//被除数-方案1
+    .s_axis_dividend_tdata(32'd100_000_000),//被除数-方案2
     .m_axis_dout_tvalid(dout_tvalid1),
     .m_axis_dout_tdata(dout_tdata1)
   );
@@ -224,7 +231,7 @@ always @(posedge sys_clk_in or negedge sys_rst_n) begin
         end
         else begin
             if(btn_push_num[2] == 1)begin
-                if(btn_push_num[1] == 0)begin
+                if(btn_push_num[1] != 0)begin
                     display_choose <= meas_freq_num;//显示测量信号的频率
                 end
                 else display_choose <= meas_period_num;//显示测量信号的周期

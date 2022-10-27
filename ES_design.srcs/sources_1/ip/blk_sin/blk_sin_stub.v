@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Sat Oct 22 21:39:59 2022
 // Host        : Ding-Legion running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {c:/Users/Dadingdang/Xilinx
-//               Project/ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin_stub.v}
+// Command     : write_verilog -force -mode synth_stub -rename_top blk_sin -prefix
+//               blk_sin_ blk_sin_stub.v
 // Design      : blk_sin
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcsg324-1
