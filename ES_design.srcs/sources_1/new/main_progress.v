@@ -28,9 +28,7 @@ module main_progress(
     output CLK_AD,//Íâ½ÓADµÄÊ±ÖÓ
     output CLK_DA,//Íâ½ÓDAµÄÊ±ÖÓ
     output [13:0] DA_D,//Íâ½ÓDA£¬Êı¾İÊä³ö
-    output [15:0] led_pin,//LED
-    output audio_sd_o,
-    output audio_pwm_o
+    output [15:0] led_pin//LED
 );
 
 
@@ -59,17 +57,17 @@ wire [63:0] set_period_num;
 wire [4:0] channel_out;//XADCµÄ
 wire eoc_out;//XADCµÄ
 wire [15:0] xdac_out_16;//XADCµÄÊä³ö£¬ÓĞ12Î»[15:4]
+wire [15:0] xdac_low_flash_out_16;//XADCµÄÊä³öµÄµÍË¢ĞÂÂÊ¸³Öµ
 
 wire [4:0] btn_push_num;//°´ÏÂ·­×ª
 
 assign CLK_AD = clk_10m;//ADÊ±ÖÓ
 assign CLK_DA = clk_10m;
-//assign led_pin[15:4] = xdac_out_16[15:4];
 assign led_pin[4:0] = btn_push_num[4:0];
 assign led_pin[5] = AD_D[9];
+assign led_pin[15:8] = meas_period[7:0];
 
-assign audio_sd_o = 1;
-assign audio_pwm_o = DA_D[13];
+
 
 Digit_LED led1 (//×ó4Î»ÊıÂë¹ÜµÄÄ£¿é
     .sys_rst_n(sys_rst_n),
@@ -99,7 +97,6 @@ freq_set2display freq_set2display(//ÆµÂÊÖµ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂë¹ÜÉÏµÄ¶ÎĞÅºÅ£¨8*8´ó
     .clk(sys_clk_in),
     .set_freq(set_freq),//ÉèÖÃµÄÆµÂÊÖµ
     .display_freq_num(display_freq_num)
-
 );
 
 
@@ -136,27 +133,6 @@ measure measure0(//ÆµÂÊ²âÁ¿Ä£¿é
     .meas_period(meas_period)//Êä³ö±»²âÁ¿ĞÅºÅÒ»¸öÖÜÆÚÄÚÓĞ¶àÉÙ¸öÊ±ÖÓ£¨100MHz£©µÄÖÜÆÚ
 );
 
-div_gen_0 div_gen_1(//µÚ1¸ö³ı·¨Æ÷£¬100MHz / ¡°±»²âÁ¿ĞÅºÅÒ»¸öÖÜÆÚÄÚÓĞ¶àÉÙ¸öÏµÍ³Ê±ÖÓ£¨100MHz£©µÄÖÜÆÚ¡± = ±»²âÁ¿ĞÅºÅµÄÆµÂÊ
-    .aclk(sys_clk_in),
-    .s_axis_divisor_tvalid(1'b1),
-    //.s_axis_divisor_tready(),
-    .s_axis_divisor_tdata(meas_period),//³ıÊı
-    .s_axis_dividend_tvalid(1'b1),
-    //.s_axis_dividend_tready(),
-    //.s_axis_dividend_tdata(32'd100_000_000_0),//±»³ıÊı-·½°¸1
-    .s_axis_dividend_tdata(32'd100_000_000),//±»³ıÊı-·½°¸2
-    .m_axis_dout_tvalid(dout_tvalid1),
-    .m_axis_dout_tdata(dout_tdata1)
-  );
-
-freq_set2display freq_set2display1(//±»²âÁ¿ĞÅºÅÆµÂÊÖµ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂë¹ÜÉÏµÄ¶ÎĞÅºÅ£¨8*8´óĞ¡£©
-    .sys_rst_n(sys_rst_n),
-    .clk(sys_clk_in),
-    .set_freq(meas_freq),
-    .display_freq_num(meas_freq_num)
-
-);
-
 btn btn(
     .sys_rst_n(sys_rst_n),
     .clk(sys_clk_in),
@@ -173,16 +149,20 @@ xadc_wiz_0 xadc_wiz (
   .do_out(xdac_out_16),            // output wire [15 : 0] do_out
   .dclk_in(sys_clk_in),          // input wire dclk_in
   .reset_in(dip_pin[0]),        // input wire reset_in
-
   .vauxp1(XADC_AUX_v_p),            // note since vauxn5, channel 5, is used  .daddr_in(ADC_ADDRESS), ADC_ADRESS = 15h, i.e., 010101
   .vauxn1(XADC_AUX_v_n),            // note since vauxn5, channel 5, is used  .daddr_in(ADC_ADDRESS), ADC_ADRESS = 15h, i.e., 010101
-
   .channel_out(channel_out),  // output wire [4 : 0] channel_out
   .eoc_out(eoc_out)       // output wire eoc_out
   //.alarm_out(led[0]),      // output wire alarm_out
   //.eos_out(led[1]),         // output wire eos_out
-
   //.busy_out(led[2])        // output wire busy_out
+);
+
+xadc_low_flash xadc_low_flash(
+    .sys_rst_n(sys_rst_n), 
+    .clk(sys_clk_in),
+    .xdac_out_16(xdac_out_16),
+    .xdac_low_flash_out_16(xdac_low_flash_out_16)
 );
 
 freq_set2display freq_set2display_meas_period(//±»²âÁ¿ĞÅºÅÖÜÆÚ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂë¹ÜÉÏµÄ¶ÎĞÅºÅ£¨8*8´óĞ¡£©
@@ -190,7 +170,6 @@ freq_set2display freq_set2display_meas_period(//±»²âÁ¿ĞÅºÅÖÜÆÚ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂ
     .clk(sys_clk_in),
     .set_freq(meas_period),
     .display_freq_num(meas_period_num)
-
 );
 
 freq_set2display freq_set2display_set_period(//Ä¿±êĞÅºÅÖÜÆÚ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂë¹ÜÉÏµÄ¶ÎĞÅºÅ£¨8*8´óĞ¡£©
@@ -198,14 +177,11 @@ freq_set2display freq_set2display_set_period(//Ä¿±êĞÅºÅÖÜÆÚ×ª»»ÎªÏÔÊ¾ÔÚ8¸öÊıÂë¹Ü
     .clk(sys_clk_in),
     .set_freq(set_period),
     .display_freq_num(set_period_num)
-
 );
 
 always @(posedge sys_clk_in or negedge sys_rst_n) begin
     if(!sys_rst_n) begin
         set_freq <= 0;
-        //display_freq_num = 64'b00111111_00111111_00111111_00111111_00111111_00111111_00111111_00111111;
-        //DA_D[5:0] <= 6'b000000;//Íâ½ÓDACµÄºó6Î»Î´Ê¹ÓÃ£¬³õÊ¼»¯Îª0
     end
     else begin
         sw_pin_trans={sw_pin[0],sw_pin[1],sw_pin[2],sw_pin[3],sw_pin[4],sw_pin[5],sw_pin[6],sw_pin[7]};
@@ -215,26 +191,22 @@ always @(posedge sys_clk_in or negedge sys_rst_n) begin
         end
         else begin
             if(btn_push_num[4] == 1)begin
-                set_freq_64 = (xdac_out_16[15:4] * 32'd10_000_000) >> 12;
+                set_freq_64 = (xdac_low_flash_out_16[15:4] * 32'd10_000_000) >> 12;
                 set_freq <= set_freq_64[31:0];
             end
             else begin
-                set_freq = (xdac_out_16[15:8] * 32'd10_000_000) >> 8;
+                set_freq = (xdac_low_flash_out_16[15:8] * 32'd10_000_000) >> 8;
             end
         end
 
         set_period = dout_tdata0[63:32];//³ı·¨Æ÷½á¹ûµÄÇ°32Î»ÊÇÉÌ
-        meas_freq <= dout_tdata1[63:32];
 
         if(btn_push_num[3] == 1)begin//×ó±ßµÄ°´Å¥
             display_choose <= 64'b01011011_00111111_01011011_11011011_00000110_01011011_01011011_01001111;//2022.Ñ§ºÅÏÔÊ¾
         end
         else begin
             if(btn_push_num[2] == 1)begin
-                if(btn_push_num[1] != 0)begin
-                    display_choose <= meas_freq_num;//ÏÔÊ¾²âÁ¿ĞÅºÅµÄÆµÂÊ
-                end
-                else display_choose <= meas_period_num;//ÏÔÊ¾²âÁ¿ĞÅºÅµÄÖÜÆÚ
+                display_choose <= meas_period_num;//ÏÔÊ¾²âÁ¿ĞÅºÅµÄÖÜÆÚ
             end
             else begin
                 if(btn_push_num[1] == 0)begin

@@ -1,0 +1,843 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 27 09:06:39 2022
+# Process ID: 1168
+# Current directory: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21116 C:\Users\Surface\Documents\GitHub\NJUST-Integrated-Design-of-Digital-System-ES_design\ES_design.xpr
+# Log file: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/vivado.log
+# Journal file: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Dadingdang/Xilinx Project/ES_design' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:55 ; elapsed = 00:00:25 . Memory (MB): peak = 732.105 ; gain = 136.000
+update_compile_order -fileset sources_1
+reset_run blk_sin_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_sin'...
+[Thu Oct 27 09:11:01 2022] Launched blk_sin_synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/blk_sin_synth_1/runme.log
+[Thu Oct 27 09:11:02 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 09:12:27 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 09:15:33 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 09:19:01 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 847.066 ; gain = 6.848
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1954.754 ; gain = 1107.688
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {is25lp080d-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcsg324-1
+Top: main_progress
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2396.543 ; gain = 179.762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main_progress' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:11]
+INFO: [Synth 8-6157] synthesizing module 'Digit_LED' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/Digit_LED.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'Digit_LED' (1#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/Digit_LED.v:8]
+INFO: [Synth 8-6157] synthesizing module 'freq_div' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/freq_div.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'freq_div' (2#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/freq_div.v:8]
+INFO: [Synth 8-6157] synthesizing module 'freq_set2display' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:18]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:60]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:86]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:100]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_nice_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:54]
+WARNING: [Synth 8-5788] Register freq_num_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register freq_num_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:73]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[7] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[6] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[5] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[4] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[3] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[2] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[1] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+WARNING: [Synth 8-5788] Register display_freq_num_make_reg[0] in module freq_set2display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'freq_set2display' (3#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v:18]
+INFO: [Synth 8-6157] synthesizing module 'div_gen_0' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/.Xil/Vivado-1168-Ding-Surface/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'div_gen_0' (4#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/.Xil/Vivado-1168-Ding-Surface/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sin' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:13]
+INFO: [Synth 8-6157] synthesizing module 'blk_sin' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/.Xil/Vivado-1168-Ding-Surface/realtime/blk_sin_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_sin' (5#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/.Xil/Vivado-1168-Ding-Surface/realtime/blk_sin_stub.v:6]
+WARNING: [Synth 8-5788] Register n_in_256_reg[7] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[6] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[5] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[4] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[3] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[2] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[1] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register n_in_256_reg[0] in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:69]
+WARNING: [Synth 8-5788] Register addra_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:38]
+WARNING: [Synth 8-5788] Register set_period_cut_for_cpr_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:78]
+WARNING: [Synth 8-5788] Register dac_data_reg in module sin is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'sin' (6#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v:13]
+INFO: [Synth 8-6157] synthesizing module 'measure' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:8]
+WARNING: [Synth 8-6014] Unused sequential element cnt_sq_wave_reg was removed.  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:28]
+WARNING: [Synth 8-5788] Register cnt_to_half_sec_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:34]
+WARNING: [Synth 8-5788] Register sq_wave_period_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:50]
+WARNING: [Synth 8-5788] Register cnt_flash_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:57]
+WARNING: [Synth 8-5788] Register meas_period_reg in module measure is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'measure' (7#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v:8]
+INFO: [Synth 8-6157] synthesizing module 'btn' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v:11]
+WARNING: [Synth 8-5788] Register cnt_btn_reg in module btn is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'btn' (8#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v:11]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/.Xil/Vivado-1168-Ding-Surface/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (9#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/.Xil/Vivado-1168-Ding-Surface/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'xadc_wiz' of module 'xadc_wiz_0' has 20 connections declared, but only 10 given [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:162]
+WARNING: [Synth 8-6014] Unused sequential element sw_pin_trans_reg was removed.  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:206]
+WARNING: [Synth 8-6014] Unused sequential element set_freq_64_reg was removed.  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:213]
+WARNING: [Synth 8-5788] Register set_period_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:116]
+WARNING: [Synth 8-5788] Register meas_freq_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:150]
+WARNING: [Synth 8-5788] Register display_choose_reg in module main_progress is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:72]
+WARNING: [Synth 8-3848] Net dac_data in module/entity main_progress does not have driver. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'main_progress' (10#1) [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:11]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[8]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[7]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[6]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[5]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[4]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[3]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[2]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[1]
+WARNING: [Synth 8-3331] design measure has unconnected port AD_D[0]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[7]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[6]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[5]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[4]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[3]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[2]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[1]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dac_data[0]
+WARNING: [Synth 8-3331] design main_progress has unconnected port DA_D[5]
+WARNING: [Synth 8-3331] design main_progress has unconnected port DA_D[4]
+WARNING: [Synth 8-3331] design main_progress has unconnected port DA_D[3]
+WARNING: [Synth 8-3331] design main_progress has unconnected port DA_D[2]
+WARNING: [Synth 8-3331] design main_progress has unconnected port DA_D[1]
+WARNING: [Synth 8-3331] design main_progress has unconnected port DA_D[0]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[15]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[14]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[13]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[12]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[11]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[10]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[9]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[8]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[7]
+WARNING: [Synth 8-3331] design main_progress has unconnected port led_pin[6]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[7]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[6]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[5]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[4]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[3]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[2]
+WARNING: [Synth 8-3331] design main_progress has unconnected port dip_pin[1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2442.633 ; gain = 225.852
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2460.520 ; gain = 243.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2460.520 ; gain = 243.738
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/div_gen_0/div_gen_0.dcp' for cell 'div_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.dcp' for cell 'xadc_wiz'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin.dcp' for cell 'sin0/rom_sin'
+INFO: [Netlist 29-17] Analyzing 660 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 4 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'xadc_wiz/inst'
+Finished Parsing XDC File [c:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'xadc_wiz/inst'
+Parsing XDC File [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////系统时钟和复位////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:1]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////串口/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'PC_Uart_rxd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'PC_Uart_txd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:7]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////蓝牙///////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'BT_Uart_rxd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'BT_Uart_txd'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'bt_ctrl_o[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'bt_mcu_int_i'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:19]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////音频接口////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'audio_pwm_o'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'audio_sd_o'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:23]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////iic////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'pw_iic_scl_io'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'pw_iic_sda_io'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:27]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////XADC模数转换///////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'XADC_VP_VN_v_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'XADC_VP_VN_v_p'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:33]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////5个按键//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:35]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////拨码开关sw0~sw7////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:42]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////拨码开关sw8~sw15/////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:52]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////////LED0~LED15////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:63]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////8个数码管位选信号/////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:82]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////数码管段选信号//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:92]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////VGA行同步场同步信号///////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'vga_hs_pin'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'vga_vs_pin'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:113]
+CRITICAL WARNING: [Designutils 20-1307] Command '///////////////////////////////////////VGA红绿蓝信号//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[5]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[6]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[7]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[10]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'vga_data_pin[11]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:127]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////////DAC数模转换//////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:129]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////////PS2/////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:145]
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:147]
+CRITICAL WARNING: [Designutils 20-1307] Command '/////////////////////////////////////////SDRAM//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[18]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:151]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[17]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[16]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:153]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[15]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[14]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[13]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[12]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[11]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[10]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:159]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:161]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[7]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:162]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[6]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[5]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:164]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:165]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:168]
+WARNING: [Vivado 12-584] No ports matched 'sram_addr[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:169]
+WARNING: [Vivado 12-584] No ports matched 'sram_ce_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:171]
+WARNING: [Vivado 12-584] No ports matched 'sram_lb_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:172]
+WARNING: [Vivado 12-584] No ports matched 'sram_oe_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:173]
+WARNING: [Vivado 12-584] No ports matched 'sram_ub_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:174]
+WARNING: [Vivado 12-584] No ports matched 'sram_we_n'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:175]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[15]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:177]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[14]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:178]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[13]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:179]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[12]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:180]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[11]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:181]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[10]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:182]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:183]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:184]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[7]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:185]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[6]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:186]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[5]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:187]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[4]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:188]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[3]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:189]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[2]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:190]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[1]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:191]
+WARNING: [Vivado 12-584] No ports matched 'sram_data[0]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:192]
+CRITICAL WARNING: [Designutils 20-1307] Command '//////////////////////////////////32个pmod接口//////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:194]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[8]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:195]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[9]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:196]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[23]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:198]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[24]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:199]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[25]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:200]
+WARNING: [Vivado 12-584] No ports matched 'exp_io[26]'. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:201]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////外接AD/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:203]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal AD_D[9] cannot be placed on G17 (IOB_X0Y63) because the pad is already occupied by terminal led_pin[5] possibly due to user constraint [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:213]
+CRITICAL WARNING: [Designutils 20-1307] Command '////////////////////////////////////外接DA/////////////////////////////////////////////' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:217]
+CRITICAL WARNING: [Designutils 20-1307] Command '//set_property' is not supported in the xdc constraint file. [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc:235]
+Finished Parsing XDC File [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/constrs_1/new/EGo1.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/main_progress_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2629.062 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 2644.375 ; gain = 427.594
+36 Infos, 167 Warnings, 22 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:44 . Memory (MB): peak = 2644.375 ; gain = 656.355
+generate_target Simulation [get_files C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin.xci]
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_sin'...
+export_ip_user_files -of_objects [get_files C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/blk_sin.xci] -directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.ip_user_files -ipstatic_source_dir C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.cache/compile_simlib/modelsim} {questa=C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.cache/compile_simlib/questa} {riviera=C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.cache/compile_simlib/riviera} {activehdl=C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/blk_sin.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/sin.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fp_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xadc_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/sim/blk_sin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_sin
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/Digit_LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digit_LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module btn
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/freq_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module freq_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_progress
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module measure
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sin
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module freq_set2display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sim_1/new/freq_devision_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj fp_sim_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/div_gen_0/sim/div_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'div_gen_0'
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2682.789 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim'
+"xelab -wto f40dafe96c604580b5b5e2d9b7d07378 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_15 -L floating_point_v7_0_16 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_15 -L blk_mem_gen_v8_4_3 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fp_sim_behav xil_defaultlib.fp_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f40dafe96c604580b5b5e2d9b7d07378 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_15 -L floating_point_v7_0_16 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_15 -L blk_mem_gen_v8_4_3 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fp_sim_behav xil_defaultlib.fp_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 7 for port 'daddr_in' [C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v:164]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package div_gen_v5_1_15.div_gen_v5_1_15_viv_comp
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xbip_bram18k_v3_0_6.xbip_bram18k_v3_0_6_pkg
+Compiling package div_gen_v5_1_15.div_gen_pkg
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package div_gen_v5_1_15.pkg_addsub
+Compiling module xil_defaultlib.Digit_LED
+Compiling module xil_defaultlib.freq_div
+Compiling module xil_defaultlib.freq_set2display
+Compiling architecture synth of entity div_gen_v5_1_15.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_15.cmp2s_v [\cmp2s_v(c_bus_width=32,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_15.cmp2s_v [\cmp2s_v(c_bus_width=32,c_ainit_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity div_gen_v5_1_15.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_15.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ai...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity div_gen_v5_1_15.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_15.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ha...]
+Compiling architecture virtex of entity div_gen_v5_1_15.dividervdc_v [\dividervdc_v(bus_num=32,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_twos_comp_viv [\c_twos_comp_viv(c_width=33,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_15.cmp2s_v [\cmp2s_v(c_bus_width=33,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_15.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_15.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity div_gen_v5_1_15.div_gen_v5_1_15_viv [\div_gen_v5_1_15_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_15.div_gen_v5_1_15 [\div_gen_v5_1_15(c_xdevicefamily...]
+Compiling architecture div_gen_0_arch of entity xil_defaultlib.div_gen_0 [div_gen_0_default]
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3(C_FAMILY="art...
+Compiling module xil_defaultlib.blk_sin
+Compiling module xil_defaultlib.sin
+Compiling module xil_defaultlib.measure
+Compiling module xil_defaultlib.btn
+Compiling module unisims_ver.XADC(INIT_40=16'b010001,INIT_41=...
+Compiling module xil_defaultlib.xadc_wiz_0
+Compiling module xil_defaultlib.main_progress
+Compiling module xil_defaultlib.fp_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp_sim_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/xsim.dir/fp_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/xsim.dir/fp_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct 27 09:36:25 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 27 09:36:25 2022...
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 2682.789 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '31' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fp_sim_behav -key {Behavioral:sim_1:Functional:fp_sim} -tclbatch {fp_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source fp_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fp_sim.u_main.sin0.rom_sin.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance fp_sim.u_main.xadc_wiz.inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.773 ; gain = 9.312
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fp_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 2702.773 ; gain = 19.984
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fp_sim.u_main.sin0.rom_sin.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance fp_sim.u_main.xadc_wiz.inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v: file does not exist.
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2721.047 ; gain = 0.000
+remove_forces { {/fp_sim/AD_D[8]} }
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2721.047 ; gain = 0.000
+run 0.6 s
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fp_sim.u_main.sin0.rom_sin.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance fp_sim.u_main.xadc_wiz.inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2721.047 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 09:39:28 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 09:42:06 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 09:45:07 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 09:54:36 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 09:57:11 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 09:59:56 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {is25lp080d-spi-x1_x2_x4}] 0]
+refresh_hw_device: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2732.633 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 10:13:32 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 10:15:28 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 10:18:48 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 10:24:40 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 10:27:57 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Thu Oct 27 10:32:09 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+close_hw
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {is25lp080d-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 10:35:30 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 10:37:05 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 10:40:28 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 10:44:30 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 10:46:48 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 10:49:36 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 10:56:08 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 10:58:56 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 11:01:56 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Oct 27 11:07:46 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/synth_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_runs impl_1 -jobs 8
+[Thu Oct 27 11:09:47 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Oct 27 11:13:50 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {is25lp080d-spi-x1_x2_x4}] 0]
+get_cfgmem_parts: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2782.453 ; gain = 0.000
+refresh_hw_device: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2782.453 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.runs/impl_1/main_progress.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
