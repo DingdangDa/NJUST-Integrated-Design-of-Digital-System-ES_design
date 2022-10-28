@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xadc_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/blk_sin/sim/blk_sin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_sin
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/Digit_LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digit_LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/btn.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module btn
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/freq_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module freq_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/main_progress.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_progress
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/measure.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module measure
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/sin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sin
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/two2ten.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module freq_set2display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/new/xadc_low_flash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xadc_low_flash
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sim_1/new/freq_devision_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.srcs/sources_1/ip/div_gen_0/sim/div_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'div_gen_0'

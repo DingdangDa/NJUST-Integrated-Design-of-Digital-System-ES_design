@@ -32,12 +32,28 @@ reg [1:0] cpr_finish;//10个100MHz时钟周期内完成了映射，的标志位
 reg [7:0] addra;
 wire [7:0] douta;
 
+wire [63:0] dout_tdata0;
+
+reg [31:0] set_period_last;
+
 blk_sin rom_sin (
   .clka(clk),    // input wire clka
   .wea(),      // input wire [0 : 0] wea
   .addra(addra),  // input wire [7 : 0] addra
   .dina(),    // input wire [7 : 0] dina
   .douta(douta)  // output wire [7 : 0] douta
+);
+
+div_gen_0 div_gen_3(//
+    .aclk(clk),
+    .s_axis_divisor_tvalid(1'b1),//给1就行
+    //.s_axis_divisor_tready(),
+    .s_axis_divisor_tdata(set_period),
+    .s_axis_dividend_tvalid(1'b1),//给1就行
+    //.s_axis_dividend_tready(),
+    .s_axis_dividend_tdata(cnt_for_sin_10m * 256),
+    .m_axis_dout_tvalid(),
+    .m_axis_dout_tdata(dout_tdata0)
 );
 
 
@@ -83,17 +99,17 @@ always @(posedge clk or negedge sys_rst_n) begin
         end
 
         if(cnt_for_sin_out_10m > 0 && cnt_for_sin_out_10m <= 8)begin//10Mhz的数数，10个时钟周期，周期的中间12345678
-            if(cnt_for_sin_10m < set_period_cut_for_cpr && !cpr_finish)begin//目标值小了
+            if(cnt_for_sin_10m < set_period_cut_for_cpr && ~cpr_finish)begin//目标值小了
                 set_period_cut_for_cpr <= set_period_cut_for_cpr - (set_period >> (1 + cnt_for_sin_out_10m));//锟斤拷锟街凤拷锟斤拷一锟斤拷
                 n_in_256[8 - cnt_for_sin_out_10m] <= 0;//n_in_256某一位是0
             end
             else begin
-                if(cnt_for_sin_10m > set_period_cut_for_cpr && !cpr_finish)begin//目标值大了
+                if(cnt_for_sin_10m > set_period_cut_for_cpr && ~cpr_finish)begin//目标值大了
                     set_period_cut_for_cpr <= set_period_cut_for_cpr + (set_period >> (1 + cnt_for_sin_out_10m));//二分法加一点
                     n_in_256[8 - cnt_for_sin_out_10m] <= 1;//n_in_256某一位是1
                 end
                 else begin
-                    if(cnt_for_sin_10m == set_period_cut_for_cpr && !cpr_finish)begin//目标值一样
+                    if(cnt_for_sin_10m == set_period_cut_for_cpr && ~cpr_finish)begin//目标值一样
                         cpr_finish <= 1;//完成映射
                         n_in_256[8 - cnt_for_sin_out_10m] <= 1;
                     end
@@ -103,13 +119,25 @@ always @(posedge clk or negedge sys_rst_n) begin
 
         if(cnt_for_sin_out_10m == 9)begin//10Mhz的数数，10个时钟周期，周期的结尾9
             cpr_finish <= 1;//完成映射（约等于）?
-            //dac_data <= sin_data[{n_in_256[7],n_in_256[6],n_in_256[5],n_in_256[4],n_in_256[3],n_in_256[2],n_in_256[1],n_in_256[0]}];
-            addra <= {n_in_256[7],n_in_256[6],n_in_256[5],n_in_256[4],n_in_256[3],n_in_256[2],n_in_256[1],n_in_256[0]};
+            //addra <= {n_in_256[7],n_in_256[6],n_in_256[5],n_in_256[4],n_in_256[3],n_in_256[2],n_in_256[1],n_in_256[0]};
+            addra <= dout_tdata0[39:32];
             //dac_data <= douta;
             //dac_wr2_n <= 1;//这个是对板载DAC的某一控制位翻转，可以让板载DAC刷新一下输出
         end
         dac_data <= douta;
-
+        
+        set_period_last <= set_period;
+        if(set_period_last != set_period)begin
+            cnt_for_sin <= 0;
+            cnt_for_sin_10m <= 0;
+            cnt_for_sin_out_10m <= 0;
+            cpr_finish <= 0;
+            dac_ile <= 1;
+            dac_cs_n <= 0;
+            dac_wr1_n <= 0;
+            dac_wr2_n <= 0;
+            dac_xfer_n <= 0;
+        end
     end
 end
 

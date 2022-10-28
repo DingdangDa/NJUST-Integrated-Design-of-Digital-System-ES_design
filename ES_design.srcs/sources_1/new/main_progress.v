@@ -35,6 +35,7 @@ module main_progress(
 wire clk_10m,clk_10k;//接收来自分频器模块的分频信号
 
 reg [7:0] sw_pin_trans;//左边开关输入，转置。转置后7是最左边，0是最右边
+reg [7:0] sw_pin_last;
 reg [31:0] set_freq;//这是我们所设置的频率值
 reg [63:0] set_freq_64;
 reg [31:0] set_period;//根据设置的频率值，计算得到的目标周期内含有多少个系统时钟（100MHz）的周期
@@ -61,12 +62,13 @@ wire [15:0] xdac_low_flash_out_16;//XADC的输出的低刷新率赋值
 
 wire [4:0] btn_push_num;//按下翻转
 
+reg [0:0] sys_rst_n_1;
+
 assign CLK_AD = clk_10m;//AD时钟
 assign CLK_DA = clk_10m;
 assign led_pin[4:0] = btn_push_num[4:0];
-assign led_pin[5] = AD_D[9];
+assign led_pin[7:5] = AD_D[9:7];
 assign led_pin[15:8] = meas_period[7:0];
-
 
 
 Digit_LED led1 (//左4位数码管的模块
@@ -127,7 +129,7 @@ sin sin0(//通过“目标周期内含有多少个系统时钟（100MHz）的周期”，以10M的频率刷新
 
 measure measure0(//频率测量模块
     .sys_rst_n(sys_rst_n),
-    .clk(sys_clk_in),
+    .clk(~clk_10m),
     .AD_D(AD_D),//输入AD的数值
     .meas_high_flash(btn_push_num[4]),//高低刷新率
     .meas_period(meas_period)//输出被测量信号一个周期内有多少个时钟（100MHz）的周期
@@ -191,11 +193,11 @@ always @(posedge sys_clk_in or negedge sys_rst_n) begin
         end
         else begin
             if(btn_push_num[4] == 1)begin
-                set_freq_64 = (xdac_low_flash_out_16[15:4] * 32'd10_000_000) >> 12;
+                set_freq_64 = (xdac_low_flash_out_16[15:4] * 32'd2_000_000) >> 12;
                 set_freq <= set_freq_64[31:0];
             end
             else begin
-                set_freq = (xdac_low_flash_out_16[15:8] * 32'd10_000_000) >> 8;
+                set_freq = (xdac_low_flash_out_16[15:8] * 32'd2_000_000) >> 8;
             end
         end
 
@@ -216,11 +218,15 @@ always @(posedge sys_clk_in or negedge sys_rst_n) begin
             end
         end
 
-
-
+        sw_pin_last <= sw_pin;
+        if(sw_pin_last != sw_pin)begin
+            set_freq <= 0;
+        end
 
 
     end
 end
+
+
 
 endmodule

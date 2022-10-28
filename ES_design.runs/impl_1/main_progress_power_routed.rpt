@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Oct 27 16:58:59 2022
-| Host             : Ding-Legion running 64-bit major release  (build 9200)
+| Date             : Fri Oct 28 14:06:42 2022
+| Host             : Ding-Surface running 64-bit major release  (build 9200)
 | Command          : report_power -file main_progress_power_routed.rpt -pb main_progress_power_summary_routed.pb -rpx main_progress_power_routed.rpx
 | Design           : main_progress
 | Device           : xc7a35tcsg324-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 59.046 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 84.381 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 58.560                           |
+| Dynamic (W)              | 83.895                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 4.8                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,20 +52,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |    23.690 |     7725 |       --- |             --- |
-|   LUT as Logic          |    18.733 |     2177 |     20800 |           10.47 |
-|   CARRY4                |     2.666 |      422 |      8150 |            5.18 |
-|   Register              |     2.285 |     4181 |     41600 |           10.05 |
-|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   Others                |     0.000 |      601 |       --- |             --- |
-|   LUT as Shift Register |     0.000 |        4 |      9600 |            0.04 |
-| Signals                 |    19.887 |     5264 |       --- |             --- |
-| Block RAM               |     0.005 |      0.5 |        50 |            1.00 |
+| Slice Logic             |    36.173 |    12113 |       --- |             --- |
+|   LUT as Logic          |    27.146 |     3165 |     20800 |           15.22 |
+|   CARRY4                |     4.744 |      712 |      8150 |            8.74 |
+|   Register              |     4.265 |     6884 |     41600 |           16.55 |
+|   BUFG                  |     0.015 |        2 |        32 |            6.25 |
+|   LUT as Shift Register |     0.002 |        8 |      9600 |            0.08 |
+|   Others                |     0.000 |     1108 |       --- |             --- |
+| Signals                 |    30.446 |     8127 |       --- |             --- |
+| Block RAM               |    <0.001 |      0.5 |        50 |            1.00 |
 | DSPs                    |     0.881 |        3 |        90 |            3.33 |
-| I/O                     |    13.976 |       88 |       210 |           41.90 |
+| I/O                     |    16.274 |       92 |       210 |           43.81 |
 | XADC                    |     0.121 |        1 |       --- |             --- |
 | Static Power            |     0.486 |          |           |                 |
-| Total                   |    59.046 |          |           |                 |
+| Total                   |    84.381 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    44.903 |      44.562 |      0.341 |
-| Vccaux    |       1.800 |     0.563 |       0.510 |      0.053 |
-| Vcco33    |       3.300 |     3.937 |       3.936 |      0.001 |
+| Vccint    |       1.000 |    67.956 |      67.615 |      0.341 |
+| Vccaux    |       1.800 |     0.647 |       0.593 |      0.053 |
+| Vcco33    |       3.300 |     4.583 |       4.582 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,22 +142,23 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| main_progress                  |    58.560 |
-|   btn                          |     0.313 |
-|   div_gen_0                    |    29.383 |
-|     U0                         |    29.383 |
-|       i_synth                  |    29.383 |
-|   freq_div                     |     0.242 |
-|   freq_set2display             |     1.264 |
-|   freq_set2display_meas_period |     1.183 |
-|   freq_set2display_set_period  |     1.177 |
-|   led1                         |     0.192 |
-|   led2                         |     0.193 |
-|   measure0                     |     0.967 |
-|   sin0                         |     7.026 |
-|     rom_sin                    |     0.009 |
-|       U0                       |     0.009 |
-|   xadc_wiz                     |     0.127 |
+| main_progress                  |    83.895 |
+|   btn                          |     0.278 |
+|   div_gen_0                    |    24.708 |
+|     U0                         |    24.708 |
+|       i_synth                  |    24.708 |
+|   freq_div                     |     0.311 |
+|   freq_set2display             |     1.132 |
+|   freq_set2display_meas_period |     1.120 |
+|   freq_set2display_set_period  |     1.203 |
+|   led1                         |     0.197 |
+|   led2                         |     0.187 |
+|   measure0                     |     0.447 |
+|   sin0                         |    35.207 |
+|     div_gen_3                  |    34.809 |
+|       U0                       |    34.809 |
+|   xadc_low_flash               |     0.161 |
+|   xadc_wiz                     |     0.164 |
 +--------------------------------+-----------+
 
 

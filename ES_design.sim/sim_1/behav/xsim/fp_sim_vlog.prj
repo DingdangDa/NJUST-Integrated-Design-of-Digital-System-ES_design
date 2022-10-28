@@ -9,6 +9,7 @@ verilog xil_defaultlib  \
 "../../../../ES_design.srcs/sources_1/new/measure.v" \
 "../../../../ES_design.srcs/sources_1/new/sin.v" \
 "../../../../ES_design.srcs/sources_1/new/two2ten.v" \
+"../../../../ES_design.srcs/sources_1/new/xadc_low_flash.v" \
 "../../../../ES_design.srcs/sim_1/new/freq_devision_sim.v" \
 
 # compile glbl module

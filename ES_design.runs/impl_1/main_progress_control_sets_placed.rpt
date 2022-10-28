@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Oct 27 16:58:34 2022
-| Host         : Ding-Legion running 64-bit major release  (build 9200)
+| Date         : Fri Oct 28 14:05:58 2022
+| Host         : Ding-Surface running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file main_progress_control_sets_placed.rpt
 | Design       : main_progress
 | Device       : xc7a35t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    46 |
-|    Minimum number of control sets                        |    46 |
+| Total control sets                                       |    47 |
+|    Minimum number of control sets                        |    47 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   123 |
+| Unused register locations in slices containing registers |   132 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    46 |
-| >= 0 to < 4        |     1 |
+| Total control sets |    47 |
+| >= 0 to < 4        |     0 |
 | >= 4 to < 6        |    24 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     4 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     0 |
+| >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    17 |
+| >= 16              |    18 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            3059 |          545 |
-| No           | No                    | Yes                    |             195 |           54 |
+| No           | No                    | No                     |            5705 |          981 |
+| No           | No                    | Yes                    |             207 |           57 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             508 |          145 |
-| Yes          | No                    | Yes                    |             355 |           78 |
+| Yes          | No                    | No                     |             549 |          156 |
+| Yes          | No                    | Yes                    |             359 |           78 |
 | Yes          | Yes                   | No                     |              64 |           20 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,55 +70,56 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|      Clock Signal     |                        Enable Signal                        |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
-+-----------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  sys_clk_in_IBUF_BUFG | sys_rst_n_IBUF                                              | btn/btn_push_num_reg[3]_0                                   |                1 |              1 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[4][3]_i_1__0_n_0      |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[7][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[2][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[3][3]_i_1__0_n_0      |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[7][3]_i_1__0_n_0      |                                                             |                2 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[6][3]_i_1__0_n_0      |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[1][3]_i_1__0_n_0      |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[2][3]_i_1__0_n_0      |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[0][3]_i_1__0_n_0      |                                                             |                2 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num[5][3]_i_1__0_n_0      |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[4][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[5][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[2][3]_i_1_n_0                     |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[0][3]_i_1_n_0                     |                                                             |                2 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[1][3]_i_1_n_0                     |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[5][3]_i_1_n_0                     |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[7][3]_i_1_n_0                     |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[3][3]_i_1_n_0                     |                                                             |                2 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[3][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[4][3]_i_1_n_0                     |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[0][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[1][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num[6][3]_i_1_n_0                     |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num[6][3]_i_1__1_n_0       |                                                             |                1 |              4 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num_nice[7][3]_i_2__0_n_0 | freq_set2display_meas_period/freq_num_nice[7][3]_i_1__0_n_0 |                4 |              8 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num_nice[7][3]_i_2_n_0                | freq_set2display/freq_num_nice[7][3]_i_1_n_0                |                3 |              8 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num_nice[7][3]_i_2__1_n_0  | freq_set2display_set_period/freq_num_nice[7][3]_i_1__1_n_0  |                3 |              8 |
-|  sys_clk_in_IBUF_BUFG | sin0/addra                                                  | sin0/addra[7]_i_1_n_0                                       |                1 |              8 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/freq_num_nice[7][3]_i_2__0_n_0 |                                                             |                6 |             24 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/freq_num_nice[7][3]_i_2_n_0                |                                                             |                6 |             24 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/freq_num_nice[7][3]_i_2__1_n_0  |                                                             |                5 |             24 |
-|  sys_clk_in_IBUF_BUFG | btn/E[0]                                                    | freq_set2display_meas_period/sys_rst_n                      |                6 |             24 |
-|  freq_div/CLK         |                                                             | freq_set2display_meas_period/sys_rst_n                      |                7 |             28 |
-|  sys_clk_in_IBUF_BUFG | btn/cnt_btn[31]_i_2_n_0                                     | btn/cnt_btn[31]_i_1_n_0                                     |                8 |             31 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_meas_period/set_freq_rfi[31]_i_1__0_n_0    | freq_set2display_meas_period/sys_rst_n                      |                8 |             32 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display/set_freq_rfi[31]_i_1_n_0                   | freq_set2display_meas_period/sys_rst_n                      |                8 |             32 |
-|  sys_clk_in_IBUF_BUFG | sin0/cnt_for_sin_10m                                        | freq_set2display_meas_period/sys_rst_n                      |               13 |             32 |
-|  sys_clk_in_IBUF_BUFG | sin0/set_period_cut_for_cpr                                 |                                                             |               15 |             32 |
-|  sys_clk_in_IBUF_BUFG | freq_set2display_set_period/set_freq_rfi[31]_i_1__1_n_0     | freq_set2display_meas_period/sys_rst_n                      |                8 |             32 |
-|  sys_clk_in_IBUF_BUFG | measure0/AD_D_9_period                                      | freq_set2display_meas_period/sys_rst_n                      |                5 |             32 |
-|  sys_clk_in_IBUF_BUFG | measure0/meas_period[31]_i_1_n_0                            |                                                             |               14 |             40 |
-|  sys_clk_in_IBUF_BUFG |                                                             | freq_set2display_meas_period/sys_rst_n                      |               47 |            167 |
-|  sys_clk_in_IBUF_BUFG | sys_rst_n_IBUF                                              | freq_set2display_meas_period/sys_rst_n                      |               30 |            171 |
-|  sys_clk_in_IBUF_BUFG | sys_rst_n_IBUF                                              |                                                             |               71 |            268 |
-|  sys_clk_in_IBUF_BUFG |                                                             |                                                             |              545 |           3063 |
-+-----------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
++----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|        Clock Signal        |                        Enable Signal                        |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[0][3]_i_1_n_0                     |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[6][3]_i_1__1_n_0       |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[4][3]_i_1__1_n_0       |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[1][3]_i_1__1_n_0       |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[2][3]_i_1__1_n_0       |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[7][3]_i_1__1_n_0       |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[5][3]_i_1__1_n_0       |                                                             |                3 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[0][3]_i_1__0_n_0      |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[2][3]_i_1__0_n_0      |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[1][3]_i_1__0_n_0      |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[3][3]_i_1__0_n_0      |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[1][3]_i_1_n_0                     |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[2][3]_i_1_n_0                     |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[3][3]_i_1_n_0                     |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[4][3]_i_1_n_0                     |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[7][3]_i_1_n_0                     |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[6][3]_i_1_n_0                     |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num[5][3]_i_1_n_0                     |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[0][3]_i_1__1_n_0       |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[5][3]_i_1__0_n_0      |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[6][3]_i_1__0_n_0      |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[7][3]_i_1__0_n_0      |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num[3][3]_i_1__1_n_0       |                                                             |                2 |              4 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num[4][3]_i_1__0_n_0      |                                                             |                1 |              4 |
+|  sys_clk_in_IBUF_BUFG      | sin0/addra                                                  | sin0/addra[7]_i_1_n_0                                       |                1 |              8 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num_nice[7][3]_i_2__1_n_0  | freq_set2display_set_period/freq_num_nice[7][3]_i_1__1_n_0  |                3 |              8 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num_nice[7][3]_i_2_n_0                | freq_set2display/freq_num_nice[7][3]_i_1_n_0                |                3 |              8 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num_nice[7][3]_i_2__0_n_0 | freq_set2display_meas_period/freq_num_nice[7][3]_i_1__0_n_0 |                4 |              8 |
+|  sys_clk_in_IBUF_BUFG      | xadc_low_flash/xdac_low_flash_out_16                        | freq_set2display_set_period/sys_rst_n                       |                4 |             12 |
+|  sys_clk_in_IBUF_BUFG      | sin0/cnt_for_sin_10m[23]_i_1_n_0                            | freq_set2display_set_period/sys_rst_n                       |                8 |             24 |
+|  sys_clk_in_IBUF_BUFG      | btn/E[0]                                                    | freq_set2display_set_period/sys_rst_n                       |                6 |             24 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/freq_num_nice[7][3]_i_2__1_n_0  |                                                             |                6 |             24 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/freq_num_nice[7][3]_i_2_n_0                |                                                             |                8 |             24 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/freq_num_nice[7][3]_i_2__0_n_0 |                                                             |                5 |             24 |
+|  freq_div/CLK              |                                                             | freq_set2display_set_period/sys_rst_n                       |                8 |             28 |
+| ~freq_div/CLK_DA_OBUF_BUFG | measure0/AD_D_9_period_0                                    | freq_set2display_set_period/sys_rst_n                       |                9 |             32 |
+|  sys_clk_in_IBUF_BUFG      | xadc_low_flash/cnt_to_half_sec[0]_i_1__0_n_0                |                                                             |                8 |             32 |
+|  sys_clk_in_IBUF_BUFG      | btn/cnt_btn[31]_i_2_n_0                                     | btn/cnt_btn[31]_i_1_n_0                                     |                9 |             32 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_set_period/set_freq_rfi[31]_i_1__1_n_0     | freq_set2display_set_period/sys_rst_n                       |                8 |             32 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display/set_freq_rfi[31]_i_1_n_0                   | freq_set2display_set_period/sys_rst_n                       |                8 |             32 |
+|  sys_clk_in_IBUF_BUFG      | freq_set2display_meas_period/set_freq_rfi[31]_i_1__0_n_0    | freq_set2display_set_period/sys_rst_n                       |                8 |             32 |
+| ~freq_div/CLK_DA_OBUF_BUFG |                                                             | freq_set2display_set_period/sys_rst_n                       |               13 |             34 |
+| ~freq_div/CLK_DA_OBUF_BUFG | measure0/meas_period[31]_i_1_n_0                            |                                                             |               13 |             40 |
+|  sys_clk_in_IBUF_BUFG      |                                                             | freq_set2display_set_period/sys_rst_n                       |               36 |            145 |
+|  sys_clk_in_IBUF_BUFG      | sys_rst_n_IBUF                                              | freq_set2display_set_period/sys_rst_n                       |               27 |            171 |
+|  sys_clk_in_IBUF_BUFG      | sys_rst_n_IBUF                                              |                                                             |               80 |            309 |
+|  sys_clk_in_IBUF_BUFG      |                                                             |                                                             |              981 |           5713 |
++----------------------------+-------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 

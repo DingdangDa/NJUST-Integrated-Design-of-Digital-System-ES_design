@@ -2,16 +2,13 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct 27 12:44:15 2022
-# Process ID: 28944
-# Current directory: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.sim/sim_1/behav/xsim/xsim.dir/fp_sim_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Dadingdang/Xilinx Project/ES_design/ES_design.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Fri Oct 28 14:40:57 2022
+# Process ID: 22356
+# Current directory: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/xsim.dir/fp_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Dadingdang/Xilinx -notrace
-invalid command name "%"
-    while executing
-"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
-    (file "C:/Users/Dadingdang/Xilinx" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Thu Oct 27 12:44:15 2022...
+source C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/xsim.dir/fp_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Surface/Documents/GitHub/NJUST-Integrated-Design-of-Digital-System-ES_design/ES_design.sim/sim_1/behav/xsim/xsim.dir/fp_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 28 14:41:01 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 28 14:41:01 2022...

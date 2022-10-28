@@ -11,7 +11,7 @@ module xadc_low_flash(
     output reg [15:0] xdac_low_flash_out_16
     );
 
-    reg xdac_out_16_save;
+    reg [15:0] xdac_out_16_save;
     reg [31:0] cnt_to_half_sec;//会数到半秒的数
 
     always @(posedge clk or negedge sys_rst_n)begin
